@@ -1,0 +1,18 @@
+﻿@using BirthdaysCalendarProject.Infrastructure.Repositories.Models;
+@model BirthdayPersonDtoOut
+@{
+    ViewData["Title"] = "Редактирование записи о дне рождении";
+}
+
+<div>
+    <button onclick="window.location.href='/';">Назад</button>
+</div>
+<form method="post" action="/Edit/@Model.Id" enctype="multipart/form-data">
+    <input name="id" disabled="disabled" value="@Model.Id" /><br />
+    <label>Имя:</label><br />
+    <input name="name" value="@Model.Name" /><br />
+    <label>День рождения:</label><br />
+    <input type="datetime" name="birthday" value="@Model.Birthday" /><br />
+    <input type="file" accept="image/*" name="avatar" />
+    <input type="submit" />
+</form>

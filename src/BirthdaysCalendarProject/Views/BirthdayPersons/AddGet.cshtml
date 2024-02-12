@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Добавление записи о дне рождении";
+}
+
+<div>
+    <button onclick="window.location.href='/';">Назад</button>
+</div>
+<form method="post" action="/Add" enctype="multipart/form-data">
+    <label>Имя:</label><br />
+    <input name="name" /><br />
+    <label>День рождения:</label><br />
+    <input type="datetime" name="birthday" /><br />
+    <input type="file" accept="image/*" name="avatar" />
+    <input type="submit" />
+</form>
